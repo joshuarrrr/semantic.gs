@@ -1,5 +1,5 @@
 /////////////////
-// Semantic.gs // for LESS: http://lesscss.org/
+// Modified version of Semantic.gs // for LESS: http://lesscss.org/
 /////////////////
 
 // Defaults which you can freely override
@@ -41,7 +41,7 @@ body {
 	.clearfix;
 }
 
-.row(@columns:@columns) {
+.row(@columns:@columns,@total-width:@total-width) {
 	display: block;
 	width: @total-width*((@gutter-width + @gridsystem-width)/@gridsystem-width);
 	margin: 0 @total-width*(((@gutter-width*.5)/@gridsystem-width)*-1);
@@ -49,7 +49,7 @@ body {
 	// *margin: 0 @total-width*(((@gutter-width*.5)/@gridsystem-width)*-1)-@correction;
 	.clearfix;
 }
-.column(@x,@columns:@columns) {
+.column(@x,@columns:@columns,@total-width:@total-width) {
 	display: inline;
 	float: left;
 	width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width);
