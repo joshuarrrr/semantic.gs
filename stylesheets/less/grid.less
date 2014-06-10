@@ -6,6 +6,7 @@
 @column-width: 60;
 @gutter-width: 20;
 @columns: 12;
+@grid-container: body; //reset to the containing element if using within existing templates
 
 // Utility variable — you should never need to modify this
 @gridsystem-width: (@column-width*@columns) + (@gutter-width*@columns) * 1px;
@@ -36,7 +37,7 @@
 // GRID //
 //////////
 
-body {
+@{grid-container} {
 	width: 100%;
 	.clearfix;
 }
