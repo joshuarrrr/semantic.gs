@@ -43,7 +43,7 @@ body {
 	@include clearfix();
 }
 
-@mixin row($columns:$columns) {
+@mixin row($columns:$columns,$total-width:$total-width) {
 	display: block;
 	width: $total-width*(($gutter-width + gridsystem-width($columns))/gridsystem-width($columns));
 	margin: 0 $total-width*((($gutter-width*.5)/gridsystem-width($columns))*-1);
@@ -51,7 +51,7 @@ body {
 	// *margin: 0 $total-width*((($gutter-width*.5)/gridsystem-width($columns))*-1)-$correction;
 	@include clearfix();
 }
-@mixin column($x,$columns:$columns) {
+@mixin column($x,$columns:$columns,$total-width:$total-width) {
 	display: inline;
 	float: left;
 	width: $total-width*(((($gutter-width+$column-width)*$x)-$gutter-width) / gridsystem-width($columns));

@@ -40,14 +40,14 @@ body
 	width 100%
 	clearfix()
 
-row(columns = columns)
+row(columns = columns, total-width = total-width)
 	display block
 	width total-width * ((gutter-width + _gridsystem-width ) / _gridsystem-width)
 	margin 0 total-width * (((gutter-width * 0.5) / _gridsystem-width ) * - 1)
 	*width total-width * ((gutter-width + _gridsystem-width ) / _gridsystem-width)-correction
 	*margin 0 total-width * (((gutter-width * 0.5) / _gridsystem-width ) * - 1)-correction
 
-column(x, columns = columns)
+column(x, columns = columns, total-width = total-width)
 	display inline
 	float left
 	overflow hidden
