@@ -1,3 +1,9 @@
+#LESS Customiztions - Josh Romero - June 10, 2014
+* Added @total-width as parameter for .column and .row mixins so you can use both pixel and percentage layouts
+* Added .column-resp() and .row-resp() mixins
+* Cleaned up comments
+* Made @grid-container a variable instead of hard coded to the body element
+
 #Release 1.2 — January 11, 2012
 
 * Fixed a bug with nested columns in the SCSS version by implementing @daffydowden's gridsystem-width() function

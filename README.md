@@ -11,3 +11,6 @@ Licensed under Apache 2.0. See [LICENSE](https://github.com/twigkit/semantic.gs/
 
 #Created by
 The Semantic Grid System was built by [Tyler Tate](http://twitter.com/tylertate/) at [TwigKit](http://twigkit.com/).
+
+#Modified by
+Customizations to grid.less by [Josh Romero](http://www.joshromero.com).
