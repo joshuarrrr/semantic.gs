@@ -14,11 +14,18 @@
 // Set @total-width to 100% for a fluid layout
 @total-width: @gridsystem-width;
 
-// Uncomment these two lines and the star-hack width/margin lines below to enable sub-pixel fix for IE6 & 7. See http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
+//////////////////////// 
+// SUB-PIXEL ROUNDING // Uncomment these two lines and the star-hack width/margin lines below to enable sub-pixel fix for IE6 & 7.
+//////////////////////// See http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
+
 // @min-width: 960;
 // @correction: 0.5 / @min-width * 100 * 1%;
 
-// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
+
+////////////////////
+// MICRO CLEARFIX // http://nicolasgallagher.com/micro-clearfix-hack/
+////////////////////
+
 .clearfix() {
 	*zoom:1;
 	
@@ -33,14 +40,19 @@
 }
 
 
-//////////
-// GRID //
-//////////
+///////////////
+// CONTAINER //
+///////////////
 
 @{grid-container} {
 	width: 100%;
 	.clearfix;
 }
+
+
+//////////
+// ROWS //
+//////////
 
 .row(@columns:@columns,@total-width:@total-width) {
 	display: block;
@@ -50,6 +62,12 @@
 	// *margin: 0 @total-width*(((@gutter-width*.5)/@gridsystem-width)*-1)-@correction;
 	.clearfix;
 }
+
+
+/////////////
+// COLUMNS //
+/////////////
+
 .column(@x,@columns:@columns,@total-width:@total-width) {
 	display: inline;
 	float: left;
@@ -58,6 +76,12 @@
 	// *width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width)-@correction;
 	// *margin: 0 @total-width*((@gutter-width*.5)/@gridsystem-width)-@correction;
 }
+
+
+/////////////////
+// PUSH / PULL //
+/////////////////
+
 .push(@offset:1) {
 	margin-left: @total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @total-width*((@gutter-width*.5)/@gridsystem-width);
 }
